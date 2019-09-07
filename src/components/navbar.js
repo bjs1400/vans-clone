@@ -6,8 +6,7 @@ import pinterest from '../images/pinterest.png';
 import facebook from '../images/facebook.png';
 import twitter from '../images/twitter.png';
 
-// import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
-// import '../../node_modules/@ortawesome/fontawesome-free/js/all.js';
+import '../index.css';
 
 const Navbar = () => {
     return (

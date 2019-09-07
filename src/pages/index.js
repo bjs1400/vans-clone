@@ -2,28 +2,33 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Carousel from 'react-bootstrap/Carousel';
+import Item from 'react-bootstrap/CarouselItem';
 
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Navbar from '../components/navbar';
 import Footer from '../components/footer';
+import FilterBar from '../components/filter-bar';
 
 import Waffles from '../images/waffles-slider.png';
 import Cereal from '../images/cereal.jpg';
+
+import '../index.css';
 
 
 const IndexPage = () => (
   <>
     <Navbar />
     <Carousel>
-      <Carousel.Item>
+      <Item>
         <img src={Waffles} />
-      </Carousel.Item>
-      <Carousel.Item>
+      </Item>
+      <Item>
         <img src={Cereal} />
-      </Carousel.Item>
+      </Item>
     </Carousel>
+    <FilterBar heading="OUR PRODUCTS" />
     {/* <Layout>
       <SEO title="Waffles" />
       <h1>Hi people</h1>
@@ -34,6 +39,7 @@ const IndexPage = () => (
       </div>
       <Link to="/page-2/">Go to page 2</Link>
     </Layout> */}
+    <p className="pg-main"><em>At Van’s Foods, we’re proud to offer you and your family wholesome, nutritious foods that are seriously delicious.</em></p>
     <Footer />
   </>
 )

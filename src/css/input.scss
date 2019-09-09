@@ -1,11 +1,24 @@
 $primary-color: #ab2f26;
 
+body {
+    font-family: Aleo, sans-serif; 
+}
+
+
 .pg-main {
     text-align: center;
     font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
     color: $primary-color;
 }
 
+
+.body-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative; 
+    transform: translateY(60px);
+}
 
 
 /***********
@@ -45,6 +58,7 @@ $primary-color: #ab2f26;
     grid-template-columns: repeat(3, 1fr);
 }
 .footer-nav-section {
+    text-align: left; 
     width: 95%; 
     padding: 2%;
     display: flex;
@@ -75,6 +89,9 @@ $primary-color: #ab2f26;
     justify-content: space-between;
     align-items: center; 
     list-style: none;
+    div {
+        position: relative;
+    }
 }
 .navlink-main {
     text-transform: uppercase;
@@ -87,6 +104,20 @@ $primary-color: #ab2f26;
     font-size: smaller;
     font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: 400; 
+    cursor: pointer;
+    :hover {
+        font-weight: bold; 
+    }
+}
+
+#nm-products-after {
+    content: ' '; 
+    width: 800px;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
 }
 
 .where-to-buy {
@@ -103,6 +134,11 @@ $primary-color: #ab2f26;
     img {
         width: 60%; 
     }
+}
+
+#main-carousel {
+    // position: absolute;
+    // top: 60px
 }
 
 /***************
@@ -123,7 +159,7 @@ $primary-color: #ab2f26;
     width: 20%;
 }
 .label-bar {
-    background-color: maroon;
+    background-color: $primary-color;
     color: white;
     text-transform: uppercase;
     padding: 1%;

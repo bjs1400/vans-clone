@@ -20,7 +20,8 @@ import '../index.css';
 const IndexPage = () => (
   <>
     <Navbar />
-    <Carousel>
+    <div className="body-container">
+    <Carousel id="main-carousel">
       <Item>
         <img src={Waffles} />
       </Item>
@@ -41,6 +42,7 @@ const IndexPage = () => (
     </Layout> */}
     <p className="pg-main"><em>At Van’s Foods, we’re proud to offer you and your family wholesome, nutritious foods that are seriously delicious.</em></p>
     <Footer />
+    </div> 
   </>
 )
 

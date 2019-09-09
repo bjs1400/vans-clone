@@ -29,13 +29,13 @@ const footer = () => {
                         <a><img className="footer-logo" src={instagram} /></a>
                     </div>
                     <nav className="footer-nav">
-                        <div className="footer-nav-section" style={{ borderRight: '1px solid maroon' }}>
+                        <div className="footer-nav-section" style={{ borderRight: '1px solid #ab2f26' }}>
                             <a>OUR PRODUCTS</a>
                             <a>RECIPES</a>
                             <a>ABOUT VAN'S</a>
                             <a>JOIN THE CLUB</a>
                         </div>
-                        <div className="footer-nav-section" style={{ borderRight: '1px solid maroon' }} >
+                        <div className="footer-nav-section" style={{ borderRight: '1px solid #ab2f26' }} >
                             <a>WHERE TO BUY</a>
                             <a>FAQ</a>
                             <a>CONTACT US</a>

@@ -1,7 +1,19 @@
+body {
+  font-family: Aleo, sans-serif;
+}
+
 .pg-main {
   text-align: center;
   font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #ab2f26;
+}
+
+.body-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transform: translateY(60px);
 }
 
 /***********
@@ -44,6 +56,7 @@
 }
 
 .footer-nav-section {
+  text-align: left;
   width: 95%;
   padding: 2%;
   display: flex;
@@ -76,6 +89,9 @@
   align-items: center;
   list-style: none;
 }
+.navlist-main div {
+  position: relative;
+}
 
 .navlink-main {
   text-transform: uppercase;
@@ -88,6 +104,20 @@
   font-size: smaller;
   font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
   font-weight: 400;
+  cursor: pointer;
+}
+.navlink-main :hover {
+  font-weight: bold;
+}
+
+#nm-products-after {
+  content: " ";
+  width: 800px;
+  height: 300px;
+  background-color: white;
+  position: absolute;
+  top: 70px;
+  left: 0;
 }
 
 .where-to-buy {
@@ -126,7 +156,7 @@
 }
 
 .label-bar {
-  background-color: maroon;
+  background-color: #ab2f26;
   color: white;
   text-transform: uppercase;
   padding: 1%;

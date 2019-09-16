@@ -20,18 +20,16 @@ body {
     transform: translateY(60px);
 }
 
-
 /***********
 * FOOTER
 **********/
 .join-the-club {
     background-color: $primary-color; 
-    padding: 2%;
-    display: flex;
-    justify-content: space-evenly;
+    display: block;
     color: white;  
-    width: 100%;
-
+    text-align: center; 
+    height: auto; 
+    padding: 2%; 
 }
 
 .signup-btn {
@@ -41,12 +39,18 @@ body {
     text-align: center;
     border-radius: 5%; 
     background-color: white; 
+    width: 50%; 
 }
 .bottom-footer {
-    width: 50%;
+    width: 80%; 
     padding: 5%;
     margin: 0 auto;
     text-align: center; 
+    .footer-logos {
+        width: 80%; 
+        font-size: 14px; 
+        margin: 0 auto; 
+    }
 }
 .footer-logo {
     width: 12%;
@@ -54,25 +58,37 @@ body {
     padding: 0 5px; 
 }
 .footer-nav {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    display: block; 
+
+
 }
 .footer-nav-section {
+    ::not(:nth-child(3)) {
+        border-right: 1px solid #ab2f26;
+    }
+    float: left; 
     text-align: left; 
     width: 95%; 
     padding: 2%;
-    display: flex;
-    flex-direction: column; 
+    ul {
+        list-style: none;
+        li {
+            display: list-item; 
+            height: 30px;
+        }
+    }
     a {
         color: $primary-color; 
-        padding: 2px;
-        font-size: smaller;
+        font-size: 13px; 
+        line-height: 1.4; 
     }
 }
 
 /*************
 * HEADER
 *************/
+
 .nav-container {
     display: flex;
     justify-content: space-around; 
@@ -118,6 +134,16 @@ body {
     position: absolute;
     top: 70px;
     left: 0;
+    ::after {
+        content: 'fucking random';
+        background-color: green; 
+        width: 0; 
+        height: 0; 
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent; 
+        border-bottom: 5px solid black;
+        z-index: 10000;
+    }
 }
 
 .where-to-buy {
@@ -198,4 +224,57 @@ body {
     text-align: center;
     margin: 0 auto; 
     cursor: pointer;
+}
+
+
+/***************
+** MEDIA QUERIES
+***********/
+
+@media only screen and (max-width: 767px) {
+    .hidden-xs {
+        display: none!important; 
+    }
+    .col-xs-6 {
+        width: 50%;
+    }
+    .footer-logos a:nth-child(1) {
+        display: block; 
+    }
+    .footer-nav-section {
+        border-right: none!important; 
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .hidden-sm {
+        display: none!important; 
+    }
+    .visible-xs {
+        display: none!important; 
+    }
+    .col-sm-4 {
+        width: 33.3%; 
+    }
+    .bottom-footer {
+        width: 75%; 
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .join-the-club {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-column-gap: 2px; 
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    .bottom-footer {
+        width: 60%; 
+    }
+    .join-the-club:last-child {
+        display: flex;
+        flex-direction: column; 
+    }
 }

@@ -14,10 +14,10 @@ const footer = () => {
             <footer>
                 <div className="join-the-club">
                     <h1>JOIN THE CLUB</h1>
-                    <div style={{ width: '25%' }}>Sign up for taste recipes, Van's Foods-inspired treats, special offers, and more!</div>
-                    <div style={{ display: 'flex', height: 'auto' }}>
-                        <input style={{ marginRight: '5px' }} id="email-signup" value="Enter your email address" type="email" />
-                        <div className="signup-btn">SIGN UP</div>
+                    <div>Sign up for taste recipes, Van's Foods-inspired treats, special offers, and more!</div>
+                    <div>
+                        <input id="email-signup" value="Enter your email address" type="email" />
+                        <button className="signup-btn" />
                     </div>
                 </div>
                 <div className="bottom-footer">
@@ -29,20 +29,54 @@ const footer = () => {
                         <a><img className="footer-logo" src={instagram} /></a>
                     </div>
                     <nav className="footer-nav">
-                        <div className="footer-nav-section" style={{ borderRight: '1px solid #ab2f26' }}>
-                            <a>OUR PRODUCTS</a>
-                            <a>RECIPES</a>
-                            <a>ABOUT VAN'S</a>
-                            <a>JOIN THE CLUB</a>
+                        <div className="footer-nav-section col-xs-6 col-sm-4">
+                            <ul>
+                                <li>
+                                    <a>OUR PRODUCTS</a>
+                                </li>
+                                <li>
+                                    <a>RECIPES</a>
+                                </li>
+                                <li>
+                                    <a>ABOUT VAN'S</a>
+                                </li>
+                                <li>
+                                    <a>JOIN THE CLUB</a>
+                                </li>
+                                <li className="hidden-sm">
+                                    <a>WHERE TO BUY</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div className="footer-nav-section" style={{ borderRight: '1px solid #ab2f26' }} >
-                            <a>WHERE TO BUY</a>
-                            <a>FAQ</a>
-                            <a>CONTACT US</a>
+                        <div className="footer-nav-section col-sm-4 hidden-xs">
+                            <ul>
+                                <li>
+                                    <a>WHERE TO BUY</a>
+                                </li>
+                                <li>
+                                    <a>FAQ</a>
+                                </li>
+                                <li>
+                                    <a>CONTACT US</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div className="footer-nav-section">
-                            <a>TERMS OF USE</a>
-                            <a>PRIVACY POLICY</a>
+                        <div className="footer-nav-section col-xs-6 col-sm-4">
+                            <ul>
+                                <li className="visible-xs">
+                                    <a>FAQ</a>
+                                </li>
+                                <li className="visible-xs">
+                                    <a>CONTACT US</a>
+                                </li>
+                                <li>
+                                    <a>TERMS OF USE</a>
+                                </li>
+                                <li>
+                                    <a>PRIVACY POLICY</a>
+                                </li>
+                            </ul>
+
                         </div>
                     </nav>
                 </div>
